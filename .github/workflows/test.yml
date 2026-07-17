@@ -1,0 +1,25 @@
+# GitHub Actions Test
+
+This is a simple GitHub Action that is guaranteed to succeed.
+
+## Steps
+
+1. **Success**: Print a success message
+
+## Test
+
+```yaml
+name: Test
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Print success message
+      run: echo "Success"
+
+```
